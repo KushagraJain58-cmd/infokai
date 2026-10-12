@@ -12,7 +12,7 @@ const InfokaiMark = ({ size = 40, color = "currentColor", animate = false, delay
   <svg viewBox="0 0 512 512" width={size} height={size} className={className} aria-hidden="true">
     {pieces.map((p, i) => (
       <motion.path
-        key={p.d}
+        key={p.d} 
         d={p.d}
         fill={color}
         initial={animate ? p.from : false}

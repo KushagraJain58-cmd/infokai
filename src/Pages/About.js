@@ -28,6 +28,7 @@ const About = () => {
       <PageHero eyebrow="About us" title="Engineering partners for growing businesses." italic={[3, 4]}>
         We design, build and support the platforms our clients run on, and build products of our own.
       </PageHero>
+      
 
       <section className="bg-[color:var(--paper)] py-28 md:py-36">
         <div className="container-x grid gap-16 lg:grid-cols-2">
