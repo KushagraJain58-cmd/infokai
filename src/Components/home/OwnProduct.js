@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../common/Reveal";
-import { getAskBiz } from "../../context/ProductsContext";
 
 // Deliberately small: AskBiz is one product among the company's work, not the headline.
 const OwnProduct = () => {
-  const p = getAskBiz();
   return (
     <section className="bg-[color:var(--deep)] py-16 text-[color:var(--ivory)]">
       <Reveal className="container-x flex flex-col justify-between gap-8 md:flex-row md:items-center">
