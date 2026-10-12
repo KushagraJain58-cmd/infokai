@@ -6,11 +6,11 @@ import PageHero from "../Components/common/PageHero";
 import Reveal from "../Components/common/Reveal";
 import InfokaiMark from "../assets/svg/InfokaiMark";
 
-const interests = ["AskBiz", "Pioneer for schools", "JAMSD", "Custom product", "Partnership"];
+const interests = ["Custom software", "SaaS product", "AI solutions", "Mobile app", "UI/UX design", "Cloud and DevOps", "Other"];
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
-  const [picked, setPicked] = useState(["Custom product"]);
+  const [picked, setPicked] = useState(["Custom software"]);
   const [sent, setSent] = useState(false);
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
@@ -19,22 +19,22 @@ const Contact = () => {
   // TODO: wire to a backend endpoint; for now this opens the user's mail client.
   const submit = (e) => {
     e.preventDefault();
-    const body = `${form.message}\n\n— ${form.name}${form.company ? `, ${form.company}` : ""}\nInterested in: ${picked.join(", ")}`;
-    window.location.href = `mailto:hello@infokai.com?subject=${encodeURIComponent(`Enquiry from ${form.name}`)}&body=${encodeURIComponent(body)}`;
+    const body = `${form.message}\n\nRegards,\n${form.name}${form.company ? `, ${form.company}` : ""}\nInterested in: ${picked.join(", ")}`;
+    window.location.href = `mailto:info@infokai.in?subject=${encodeURIComponent(`Enquiry from ${form.name}`)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
   return (
     <PageTransition>
-      <PageHero eyebrow="Contact us" title="Let's build something lasting." italic={[3, 4]}>
-        Whether you want AskBiz for your business, Pioneer for your school, or a product of your own — we'd love to hear from you.
+      <PageHero eyebrow="Contact us" title="Let's build something lasting." italic={[3]}>
+        Tell us about the product you want to build, or the system you need improved or supported. We usually reply within one business day.
       </PageHero>
       <section className="grain relative bg-[color:var(--abyss)] py-24 text-[color:var(--ivory)] md:py-32">
         <div className="container-x relative z-10 grid gap-20 lg:grid-cols-[1fr_1.6fr]">
           <Reveal className="space-y-10">
             <div>
               <div className="eyebrow mb-3 text-[color:var(--brass)]">Write to us</div>
-              <a href="mailto:hello@infokai.com" className="link-u flex w-fit items-center gap-3 font-display text-2xl md:text-3xl"><Mail size={22} /> hello@infokai.com</a>
+              <a href="mailto:info@infokai.in" className="link-u flex w-fit items-center gap-3 font-display text-2xl md:text-3xl"><Mail size={22} /> info@infokai.in</a>
             </div>
             <div>
               <div className="eyebrow mb-3 text-[color:var(--brass)]">Based in</div>
@@ -47,7 +47,7 @@ const Contact = () => {
             {sent ? (
               <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-start justify-center">
                 <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", delay: 0.2 }} className="grid h-20 w-20 place-items-center rounded-full bg-[color:var(--brass)] text-[color:var(--deep)]"><Check size={36} /></motion.span>
-                <h2 className="mt-8 font-display text-5xl">Thank you, {form.name.split(" ")[0] || "friend"}.</h2>
+                <h2 className="mt-8 font-display text-5xl">Thank you{form.name.trim() ? `, ${form.name.trim().split(" ")[0]}` : ""}.</h2>
                 <p className="mt-4 text-white/60">Your mail app should have opened with the message ready. We usually reply within one business day.</p>
                 <button onClick={() => setSent(false)} className="link-u mt-8 text-sm text-[color:var(--brass)]">Send another message</button>
               </motion.div>
@@ -71,7 +71,7 @@ const Contact = () => {
                   <Reveal delay={0.15}><input required className="field" placeholder="Your name *" value={form.name} onChange={set("name")} /></Reveal>
                   <Reveal delay={0.2}><input required type="email" className="field" placeholder="Email *" value={form.email} onChange={set("email")} /></Reveal>
                 </div>
-                <Reveal delay={0.25}><input className="field" placeholder="Company / School" value={form.company} onChange={set("company")} /></Reveal>
+                <Reveal delay={0.25}><input className="field" placeholder="Company / organisation" value={form.company} onChange={set("company")} /></Reveal>
                 <Reveal delay={0.3}><textarea required rows={4} className="field resize-none" placeholder="Tell us about your project *" value={form.message} onChange={set("message")} /></Reveal>
                 <Reveal delay={0.35}><button type="submit" className="btn btn-light cut">Send message <ArrowRight size={16} /></button></Reveal>
               </motion.form>

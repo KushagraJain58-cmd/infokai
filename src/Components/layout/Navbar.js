@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import InfokaiMark from "../../assets/svg/InfokaiMark";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/products", label: "Products" },
+  { to: "/services", label: "Services" },
+  { to: "/work", label: "Our work" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -44,7 +44,6 @@ const Navbar = () => {
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/products/askbiz" className="btn btn-light !py-2.5 !px-4 text-xs">Try AskBiz <ArrowUpRight size={14} /></Link>
           </nav>
           <button onClick={() => setOpen((o) => !o)} className="relative z-50 h-10 w-10 md:hidden" aria-label="Menu">
             <span className={`absolute left-2 right-2 h-px bg-[color:var(--ivory)] transition-all ${open ? "top-5 rotate-45" : "top-4"}`} />

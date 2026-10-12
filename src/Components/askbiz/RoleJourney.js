@@ -50,7 +50,7 @@ const RoleJourney = ({ p }) => {
     <section className="bg-[color:var(--paper)] py-28 md:py-36">
       <div className="container-x">
         <SectionHeading eyebrow="Who it's for" title="Two journeys. One platform." italic={[2, 3]}>
-          Pick a role, then hover or tap any problem, action or outcome to trace how AskBiz solves it — or press play to walk through the journey.
+          Pick a role, then hover or tap any problem, action or outcome to trace how AskBiz solves it, or press play to walk through the journey.
         </SectionHeading>
 
         <Reveal delay={0.1} className="mt-12 flex flex-wrap items-center gap-3">
