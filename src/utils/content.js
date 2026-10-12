@@ -1,29 +1,28 @@
-export const products = [
-  {
+export const askbiz = {
     slug: "askbiz",
     name: "AskBiz",
-    flagship: true,
-    kicker: "Flagship · AI Business Network",
-    tagline: "Every business answer in India, one question away.",
+    kicker: "AI business network",
+    tagline: "Ask a question. Reach the people who have already solved it.",
     short:
-      "AskBiz connects aspiring entrepreneurs, legacy businesses, and verified experts on one platform, with an AI assistant that answers any business question instantly. Think IndiaMart's directory, LinkedIn's networking, and a personal business advisor, built specifically for India's 63 million MSMEs.",
+      "Entrepreneurs, established businesses and verified experts on one platform. Find suppliers and partners, learn from people who have done it before, and get answers grounded in Indian regulations and schemes.",
     problem:
-      "Starting or growing a business in India isn't held back by a lack of knowledge. It's held back by a lack of access. The people who have already solved these problems, and the businesses who supply what's needed, are impossible to find without an existing personal network.",
+      "For most small businesses in India, the answers already exist. The people who have solved the same problem, and the suppliers who can help, are simply hard to reach without an existing personal network.",
     solution:
-      "AskBiz closes that gap. It's a three-sided platform connecting Individuals looking to start or grow a business, Businesses (particularly established, legacy operations) looking for visibility and peer connections, and verified Experts like CAs, lawyers, and consultants who guide them through it.",
+      "One platform connects first-time founders, established businesses looking for trade partners, and verified chartered accountants, lawyers and consultants.",
     ai:
-      "At the centre sits an AI assistant that answers any business question by pulling from three sources at once: the platform's own verified business database, a curated knowledge base of Indian regulations and schemes, and live web search when needed. Ask it anything, how to register an MSME, which supplier to trust, what subsidy you qualify for, and it responds instantly, in your language, while pointing you toward real people on the platform who can help further.",
-    flywheel:
-      "Every question posted, every connection made, and every answer given adds to a permanent, searchable knowledge base. That makes the platform more valuable with every user who joins.",
-    closing: "Built for India. Starting with the legacy businesses everyone else has overlooked.",
+      "Answers draw on verified businesses and experts on the platform, a curated base of Indian regulations, licences and schemes, and live web search for anything current. Each one links to people who can help further.",
     sides: [
-      { title: "Individuals", text: "Aspiring founders looking to start or grow a business." },
-      { title: "Businesses", text: "Established, legacy operations seeking visibility and peers." },
-      { title: "Experts", text: "Verified CAs, lawyers and consultants who guide the way." },
+      { title: "Individuals", text: "First-time founders and professionals planning to start or grow a business." },
+      { title: "Businesses", text: "Established traders, manufacturers and MSMEs seeking visibility and trade partners." },
+      { title: "Experts", text: "Verified chartered accountants, lawyers and consultants offering guidance." },
     ],
-    sources: ["Verified business database", "Indian regulations & schemes", "Live web search"],
-    pitch:
-      "We are building India's first business knowledge platform, where aspiring entrepreneurs get answers, legacy businesses find growth, and everyone is connected through community and AI.",
+    sources: ["Verified business directory", "Indian regulations and schemes", "Live web search"],
+    features: [
+      { icon: "BadgeCheck", title: "Verified profiles", text: "Role-based profiles for individuals, businesses and experts, with credentials, reviews and trust scores." },
+      { icon: "Users", title: "Industry communities", text: "Sector spaces for textiles, food processing, agriculture, retail and more, with questions answered by practitioners." },
+      { icon: "Network", title: "B2B network", text: "Businesses find suppliers, logistics partners and peers across India, beyond their own city." },
+      { icon: "Sparkles", title: "AI business assistant", text: "Answers on registrations, compliance and schemes, linked to the people on the platform who can help." },
+    ],
     triangle:
       "Think of AskBiz as a triangle of trust. Individuals come with questions and ambitions. Businesses, especially legacy and traditional ones, bring real-world experience and potential partnerships. Experts provide domain-specific guidance. Everyone benefits from being on the same platform.",
     overview: {
@@ -96,7 +95,7 @@ export const products = [
         story: [
           "The Business role is the platform's backbone. The textile trader in Surat running the same shop for 30 years, the steel fabricator in Ludhiana, the spice wholesaler in Kochi: deep domain knowledge, established operations, and almost invisible outside their own geography.",
           "They aren't doing badly; they're stuck. New customers only come by word of mouth, reliable suppliers in other cities are hard to find, and there's no way to share what they know or build credibility at scale.",
-          "AskBiz gives them a living, active presence — not just a listing, not just a profile. They answer questions, post updates, connect with peer businesses, and as the AI indexes their expertise it recommends them to Individuals asking relevant questions. Discovery becomes organic and intent-driven.",
+          "AskBiz gives them a living, active presence, not just a listing or a profile. They answer questions, post updates, connect with peer businesses, and as the AI indexes their expertise it recommends them to Individuals asking relevant questions. Discovery becomes organic and intent-driven.",
         ],
         problems: [
           { title: "Invisible online", text: "No digital presence or discoverability", solves: [0, 3] },
@@ -121,61 +120,69 @@ export const products = [
       },
     ],
     shots: [
-      { src: "/products/askbiz-feed.png", label: "Community feed", device: "phone" },
-      { src: "/products/askbiz-assistant.png", label: "Business Assistant", device: "phone" },
-      { src: "/products/askbiz-assistant-2.png", label: "Connect with experts", device: "phone" },
+      { src: "/askbiz/app-feed.png", label: "Community feed", device: "phone" },
+      { src: "/askbiz/app-chat.png", label: "Ask, the AI assistant", device: "phone" },
+      { src: "/askbiz/app-discover.png", label: "Find experts", device: "phone" },
+      { src: "/askbiz/app-community.png", label: "Industry communities", device: "phone" },
     ],
-  },
+};
+
+export const clientWork = [
   {
-    slug: "pioneer",
-    name: "Pioneer",
-    kicker: "SaaS · EdTech for Schools",
-    tagline: "A launchpad for every student's future.",
+    slug: "edu-platform",
+    kicker: "Client project · EdTech SaaS",
+    title: "A learning and career-guidance platform for schools",
+    tagline: "Helping students see where they could go next.",
+    client: "An education-technology company",
     short:
-      "Pioneer is a SaaS learning platform licensed to schools so their students can upskill themselves — with built-in career consultancy that helps each student discover which field they should focus on.",
+      "Development partner for a SaaS platform that schools license to help students build skills, explore careers and decide which field to pursue, with guided recommendations for each student.",
+    built: "Product engineering, UX and UI design, and the full web application, delivered end to end as the client's software team.",
     features: [
-      { title: "Career Discovery", text: "A curated library of career paths for the modern Indian economy, with shortlists students can build." },
-      { title: "DISHA Psychometrics", text: "Scientifically designed assessments across aptitude, interests, EQ, creativity and leadership." },
-      { title: "Skill Readiness", text: "Monthly programs with weekly modules and a final evaluation — from Python to communication." },
-      { title: "Student Dashboard", text: "Readiness tiers, academic performance and next steps, all in one clear view." },
+      { title: "Career discovery", text: "A curated library of career paths, with shortlists students can build and revisit." },
+      { title: "Psychometric assessments", text: "A multi-module assessment suite covering aptitude, interests, emotional intelligence and leadership." },
+      { title: "Skill programmes", text: "Monthly programmes with weekly modules and a final evaluation." },
+      { title: "Student dashboard", text: "Readiness tiers, academic performance and next steps in one clear view." },
     ],
     shots: [
-      { src: "/products/pioneer-dashboard.png", label: "Student dashboard", device: "browser" },
-      { src: "/products/pioneer-careers.png", label: "Career discovery", device: "browser" },
-      { src: "/products/pioneer-psychometric.png", label: "Psychometric tests", device: "browser" },
-      { src: "/products/pioneer-skills.png", label: "Skill readiness", device: "browser" },
+      { src: "/work/edu-report.png", label: "Assessment report", device: "browser" },
+      { src: "/work/edu-school.png", label: "School overview", device: "browser" },
+      { src: "/work/edu-assessments.png", label: "Psychometric assessments", device: "browser" },
+      { src: "/work/edu-careers.png", label: "Career discovery", device: "browser" },
     ],
   },
   {
-    slug: "jamsd",
-    name: "JAMSD",
-    kicker: "Publishing · Peer Review",
+    slug: "journal-platform",
+    kicker: "Client project · Academic publishing",
+    title: "A peer-review and open-access journal platform",
     tagline: "A modern home for medical research.",
+    client: "An academic publisher",
     short:
-      "JAMSD — the Journal of Applied Medical and Surgical Disciplines — is a publishing platform where authors submit articles, editors review them through a transparent workflow, and anyone can read the published work openly.",
+      "We built the publishing platform for a medical journal: authors submit manuscripts, editors manage them through a transparent peer-review workflow, and published articles are open to all readers.",
+    built: "Workflow design, backend and frontend engineering, and the author and editor workspaces, delivered as the client's development partner.",
     features: [
-      { title: "Author Workspace", text: "Submit manuscripts, track status and read editorial comments with a full audit history." },
-      { title: "Editorial Review", text: "Editors move submissions through review, revision and acceptance with clarity." },
-      { title: "Open Access", text: "Published articles are free for anyone to read under CC BY 4.0." },
+      { title: "Author workspace", text: "Submit manuscripts, track status and read editorial comments with a full audit history." },
+      { title: "Editorial review", text: "Editors manage submissions through review, revision and acceptance in a single workflow." },
+      { title: "Open access", text: "Published articles are freely available to read and cite." },
     ],
     shots: [
-      { src: "/products/jamsd-home.png", label: "Journal home", device: "browser" },
-      { src: "/products/jamsd-manuscripts.png", label: "Author workspace", device: "browser" },
-      { src: "/products/jamsd-about.png", label: "Journal information", device: "browser" },
+      { src: "/work/journal-dashboard.png", label: "Editorial dashboard", device: "browser" },
+      { src: "/work/journal-review.png", label: "Manuscript review", device: "browser" },
     ],
   },
 ];
 
-export const testimonials = [
-  { quote: "Infokai didn't just build our journal platform — they understood peer review better than most vendors we spoke to. Our editors adopted it in a week.", name: "Editorial Board", role: "JAMSD" },
-  { quote: "Pioneer changed how our students think about careers. The DISHA assessments give counsellors something concrete to work with.", name: "School Principal", role: "Pioneer partner school" },
-  { quote: "Asked the AskBiz assistant about a trade licence at midnight and had a clear checklist — plus two experts to call — in seconds.", name: "First-time founder", role: "AskBiz user, Meerut" },
-  { quote: "Thoughtful engineers, calm communicators, and a design sense that made our product feel premium from day one.", name: "Product Lead", role: "Client partner" },
+export const services = [
+  { icon: "Code2", title: "Custom software development", text: "Web applications, internal tools and enterprise systems, engineered around how your business actually works.", items: ["Web applications", "Enterprise and internal systems", "APIs and integrations"] },
+  { icon: "Layers", title: "SaaS and product engineering", text: "We take a product from idea to a scalable, multi-tenant platform you can sell and support.", items: ["MVP to scale", "Multi-tenant architecture", "Subscription billing and licensing"] },
+  { icon: "Bot", title: "AI solutions", text: "AI assistants and automation built on your own business data, added where they measurably save time or improve decisions.", items: ["AI assistants and chatbots", "Search and Q&A over your data", "Workflow automation and reporting"] },
+  { icon: "Smartphone", title: "Mobile app development", text: "Native and cross-platform apps for Android and iOS, from first prototype to store release.", items: ["Android and iOS", "Cross-platform apps", "Store release and maintenance"] },
+  { icon: "PenTool", title: "UI/UX design", text: "Research-led interface and experience design that makes complex software simple to use.", items: ["Product and UX design", "Design systems", "Prototyping and usability testing"] },
+  { icon: "Cloud", title: "Cloud and DevOps", text: "Hosting, automated delivery and monitoring that keep your applications fast, secure and available.", items: ["Cloud setup and migration", "CI/CD pipelines", "Monitoring and security"] },
 ];
 
-export const stats = [
-  { value: 63, suffix: "M", label: "MSMEs AskBiz is built for" },
-  { value: 3, suffix: "", label: "Live products in market" },
-  { value: 11, suffix: "", label: "Assessment modules in DISHA" },
-  { value: 100, suffix: "%", label: "Open access on JAMSD" },
+export const process = [
+  { k: "Discover", t: "Understand the problem", d: "We start with your goals, users and constraints, and agree on scope before any code is written." },
+  { k: "Design", t: "Shape the solution", d: "Architecture, user flows and interface design, reviewed with you at every step." },
+  { k: "Build", t: "Engineer for quality", d: "Iterative development with regular demos, automated testing and clean, documented code." },
+  { k: "Launch & support", t: "Run and improve", d: "Deployment, monitoring and ongoing support, so your software keeps pace as your business grows." },
 ];

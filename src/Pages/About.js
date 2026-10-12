@@ -5,22 +5,18 @@ import PageTransition from "../Components/common/PageTransition";
 import PageHero from "../Components/common/PageHero";
 import SectionHeading from "../Components/common/SectionHeading";
 import Reveal from "../Components/common/Reveal";
-import Stats from "../Components/home/Stats";
-import Testimonials from "../Components/home/Testimonials";
 import CallToAction from "../Components/home/CallToAction";
+import { getProcess } from "../context/ProductsContext";
 
 const values = [
-  { icon: Compass, title: "Access over noise", text: "We build tools that connect people to the knowledge, networks and opportunities they were locked out of." },
-  { icon: Layers, title: "Crafted end to end", text: "Product thinking, design and engineering under one roof — so nothing gets lost in hand-offs." },
-  { icon: ShieldCheck, title: "Trust by design", text: "Verified experts, transparent peer review, safe spaces for students. Trust is a feature we engineer." },
-  { icon: Sparkles, title: "AI with a purpose", text: "We use AI where it genuinely shortens the path to an answer — grounded in verified data." },
+  { icon: Compass, title: "Clarity over complexity", text: "We turn complicated business needs into software that is simple to use and simple to run." },
+  { icon: Layers, title: "One team, end to end", text: "Product thinking, design and engineering under one roof, so nothing is lost in hand-offs." },
+  { icon: ShieldCheck, title: "Secure by default", text: "Security, data privacy and access control are designed in from the start, not added later." },
+  { icon: Sparkles, title: "Technology with a purpose", text: "We use new technology, including AI, where it solves a real problem, not for its own sake." },
 ];
 
-const chapters = [
-  { k: "Build", t: "JAMSD", d: "A peer-reviewed, open-access journal platform with a complete author and editor workflow." },
-  { k: "Scale", t: "Pioneer", d: "A SaaS learning and career-consultancy platform licensed to schools across India." },
-  { k: "Lead", t: "AskBiz", d: "Our flagship: an AI-powered, three-sided network for India's 63 million MSMEs." },
-];
+
+const chapters = getProcess();
 
 const About = () => {
   const lineRef = useRef(null);
@@ -29,16 +25,16 @@ const About = () => {
 
   return (
     <PageTransition>
-      <PageHero eyebrow="About us" title="Software with quiet precision." italic={[2, 3]}>
-        Infokai is a product studio and software company. We partner with schools, publishers and businesses to build modern platforms — and we build our own, starting with AskBiz.
+      <PageHero eyebrow="About us" title="Engineering partners for growing businesses." italic={[3, 4]}>
+        We design, build and support the platforms our clients run on, and build products of our own.
       </PageHero>
 
       <section className="bg-[color:var(--paper)] py-28 md:py-36">
         <div className="container-x grid gap-16 lg:grid-cols-2">
-          <SectionHeading eyebrow="Who we are" title="Two blocks, one direction." italic={[2, 3]} />
+          <SectionHeading eyebrow="Who we are" title="Product thinking, engineering depth." italic={[2, 3]} />
           <Reveal delay={0.15} className="space-y-6 text-lg leading-relaxed text-[#2B2F36]/75">
-            <p>Our mark is two offset blocks moving in opposite directions, held together by a single line. It's how we work: <strong className="text-[color:var(--deep)]">deep engineering</strong> and <strong className="text-[color:var(--deep)]">thoughtful design</strong>, pulling toward the same outcome.</p>
-            <p>We've shipped platforms for medical publishing, school education and career guidance — and we pour everything we've learned into AskBiz, a platform built for the legacy businesses and first-time founders everyone else has overlooked.</p>
+            <p>Engineers and designers working as an extension of your team. We own the full lifecycle, from scoping to long-term support, so you deal with <strong className="text-[color:var(--deep)]">one accountable partner</strong> instead of several vendors.</p>
+            <p>Client work across education technology and academic publishing. Alongside it, AskBiz, an AI-powered business network for Indian MSMEs, which keeps us close to the problems clients face: scale, reliability and real value from AI.</p>
           </Reveal>
         </div>
       </section>
@@ -62,14 +58,14 @@ const About = () => {
 
       <section className="bg-[color:var(--deep)] py-28 text-[color:var(--ivory)] md:py-36">
         <div className="container-x">
-          <SectionHeading eyebrow="Our journey" title="From client work to a flagship." italic={[4]} dark />
+          <SectionHeading eyebrow="How we work" title="One team, from idea to support." italic={[4, 5]} dark />
           <div ref={lineRef} className="relative mt-20 pl-10 md:pl-20">
             <div className="absolute left-0 top-0 h-full w-px bg-white/10 md:left-6" />
             <motion.div style={{ height: h }} className="absolute left-0 top-0 w-px bg-[color:var(--brass)] md:left-6" />
             {chapters.map((c, i) => (
               <Reveal key={c.t} delay={0.05} className="relative mb-20 last:mb-0">
                 <span className="absolute -left-[45px] top-3 h-3 w-3 rotate-45 bg-[color:var(--brass)] md:-left-[61px]" />
-                <div className="eyebrow text-[color:var(--mist)]">0{i + 1} — {c.k}</div>
+                <div className="eyebrow text-[color:var(--mist)]">0{i + 1} / {c.k}</div>
                 <div className="mt-3 font-display text-5xl md:text-6xl">{c.t}</div>
                 <p className="mt-4 max-w-xl text-white/60">{c.d}</p>
               </Reveal>
@@ -78,8 +74,6 @@ const About = () => {
         </div>
       </section>
 
-      <Stats />
-      <Testimonials />
       <CallToAction />
     </PageTransition>
   );
